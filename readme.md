@@ -8,9 +8,9 @@ Persistent webhook endpoints for development and testing. Live WebSocket feed, p
 
 ## Screenshots
 
-| Terminal-Style Landing Page | Live WebSocket Webhook Feed |
+| Landing Page | Webhook Live Feed |
 |:---:|:---:|
-| ![Terminal-Style Landing Page](screenshots/hero.png) | ![Live WebSocket Webhook Feed](screenshots/dashboard.png) |
+| ![Live feed: real-time webhook log with provider badges and status codes](screenshots/dashboard.png) |
 
 ## Features
 

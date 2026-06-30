@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>WebhookLab</title><style>
+      body{font-family:'JetBrains Mono',system-ui,monospace;background:#0a0a0f;color:#0f0;margin:0;overflow-x:hidden}
+      .scanlines{position:fixed;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.15),rgba(0,0,0,.15) 2px,transparent 2px,transparent 4px);pointer-events:none;z-index:999}
+      .nav{padding:12px 32px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1a3a1a;background:rgba(0,0,0,.9)}
+      .logo{font-size:16px;font-weight:700;color:#0f0;display:flex;align-items:center;gap:8px}
+      .logo::before{content:'> ';color:#0f0;animation:blink 1s step-end infinite}
+      @keyframes blink{50%{opacity:0}}
+      .hero{padding:60px 32px;max-width:1000px;margin:0 auto}
+      .hero h1{font-size:38px;font-weight:800;color:#0f0;margin:0 0 12px;text-shadow:0 0 20px rgba(0,255,0,.3)}
+      .hero p{font-size:15px;color:#0a0;line-height:1.6;margin:0 0 24px;max-width:600px}
+      .btn{display:inline-flex;padding:10px 24px;border:1px solid #0f0;color:#0f0;font-weight:600;text-decoration:none;font-size:14px;background:rgba(0,255,0,.05)}
+      .btn:hover{background:rgba(0,255,0,.12)}
+      .terminal{max-width:850px;margin:40px auto 0;background:#000;border:1px solid #1a3a1a;border-radius:0;overflow:hidden}
+      .term-bar{padding:10px 16px;background:#0d0d0d;border-bottom:1px solid #1a3a1a;display:flex;gap:8px;align-items:center}
+      .term-dot{width:10px;height:10px;border-radius:50%;background:#333}.term-dot.r{background:#f55}.term-dot.y{background:#fa0}.term-dot.g{background:#0f0}
+      .term-title{font-size:11px;color:#555;margin-left:8px}
+      .term-body{padding:16px;font-size:12px;line-height:1.7;max-height:380px;overflow:hidden}
+      .log-line{display:block;margin-bottom:2px}
+      .log-time{color:#555}.log-method{font-weight:700}.log-method.POST{color:#0ff}.log-method.GET{color:#0f0}.log-path{color:#ff0}.log-status{color:#0f0}.log-status.err{color:#f55}
+      .provider-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border:1px solid #1a3a1a;font-size:10px;margin-left:4px}
+      .features{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:1000px;margin:0 auto;padding:40px 32px;background:#0d0d0d}
+      .feat{padding:20px;background:#0a0a0f}
+      .feat h3{font-size:14px;color:#0f0;margin:0 0 6px}
+      .feat p{font-size:12px;color:#080;line-height:1.5;margin:0}
+      .providers{display:flex;gap:12px;flex-wrap:wrap;max-width:1000px;margin:30px auto;padding:0 32px}
+      .prov{padding:6px 14px;border:1px solid #1a3a1a;font-size:12px;color:#0a0;font-family:monospace}
+      .prov .check{color:#0f0}
+    
+.features, .providers { display: none !important; }
+</style></head><body>
+      <div class="scanlines"></div>
+      <nav class="nav"><div class="logo">webhooklab</div><div style="font-size:12px;color:#0a0">endpoint: wh_3xk9a · 📡 LIVE</div></nav>
+      <section class="hero">
+        <h1>Test Webhooks. No Deploy Required.</h1>
+        <p>Persistent endpoints that never expire. Real-time WebSocket feed. Auto-detect Stripe, GitHub, Shopify. Replay, transform, share with your team.</p>
+        <a href="#" class="btn">New Endpoint →</a>
+        <div class="terminal">
+          <div class="term-bar"><div class="term-dot r"></div><div class="term-dot y"></div><div class="term-dot g"></div><div class="term-title">webhooklab — wh_3xk9a — RECEIVING</div></div>
+          <div class="term-body">
+            <span class="log-line"><span class="log-time">22:14:03</span> <span class="log-method POST">POST</span> <span class="log-path">/wh_3xk9a</span> <span class="provider-badge">Stripe ✓</span> <span class="log-status">200</span> — payment_intent.succeeded</span>
+            <span class="log-line"><span class="log-time">22:14:07</span> <span class="log-method POST">POST</span> <span class="log-path">/wh_3xk9a</span> <span class="provider-badge">GitHub ✓</span> <span class="log-status">200</span> — pull_request.opened</span>
+            <span class="log-line"><span class="log-time">22:14:12</span> <span class="log-method POST">POST</span> <span class="log-path">/wh_3xk9a</span> <span class="provider-badge">Shopify ✓</span> <span class="log-status">200</span> — orders/create</span>
+            <span class="log-line"><span class="log-time">22:14:18</span> <span class="log-method POST">POST</span> <span class="log-path">/wh_3xk9a</span> <span class="log-status">200</span> — customer.subscription.updated</span>
+            <span class="log-line"><span class="log-time">22:14:23</span> <span class="log-method POST">POST</span> <span class="log-path">/wh_3xk9a</span> <span class="provider-badge">Slack ✓</span> <span class="log-status">200</span> — message.channels</span>
+            <span class="log-line"><span class="log-time">22:14:29</span> <span class="log-method POST">POST</span> <span class="log-path">/wh_3xk9a</span> <span class="log-status err">500</span> — ❌ Signature Verification Failed [REPLAY]</span>
+            <span class="log-line"><span class="log-time">22:14:34</span> <span class="log-method GET">GET</span> <span class="log-path">/wh_3xk9a/health</span> <span class="log-status">200</span> — UP</span>
+            <span class="log-line"><span class="log-time">22:14:38</span> <span class="log-method POST">POST</span> <span class="log-path">/wh_3xk9a/transform</span> <span class="log-status">200</span> — Stripe→Slack transform</span>
+          </div>
+        </div>
+      </section>
+      <div class="features">
+        <div class="feat"><h3>⚡ Live WebSocket Feed</h3><p>Webhooks appear instantly — no refresh. Terminal-style real-time stream.</p></div>
+        <div class="feat"><h3>🕵️ Auto-Detect Provider</h3><p>Stripe, GitHub, Shopify, Slack — parsed and signature-verified automatically.</p></div>
+        <div class="feat"><h3>🔄 Payload Replay</h3><p>Resend with modified values to test edge cases and error handling.</p></div>
+        <div class="feat"><h3>🔀 Transform Engine</h3><p>Convert Stripe webhook → Slack message format. Custom templates supported.</p></div>
+        <div class="feat"><h3>👥 Team Sharing</h3><p>Invite teammates to session. Real-time collaborative debugging.</p></div>
+        <div class="feat"><h3>⏱️ Retry Simulator</h3><p>Test delayed/failed webhook delivery scenarios.</p></div>
+      </div>
+      <div class="providers"><span class="prov">Stripe <span class="check">✓</span></span><span class="prov">GitHub <span class="check">✓</span></span><span class="prov">Shopify <span class="check">✓</span></span><span class="prov">Slack <span class="check">✓</span></span><span class="prov">Custom <span class="check">✓</span></span></div>
+    </body></html>
