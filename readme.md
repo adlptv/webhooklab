@@ -29,9 +29,9 @@ WebhookLab is a **persistent webhook gateway** for development and testing. Rece
 
 ## 📸 Screenshots
 
-| Landing Page | Dashboard |
+| Terminal-Style Landing Page | Live WebSocket Webhook Feed |
 |:---:|:---:|
-| ![Webhooklab Hero](screenshots/hero.png) | ![Webhooklab Dashboard](screenshots/dashboard.png) |
+| ![Live WebSocket Webhook Feed](screenshots/dashboard.png) |
 
 > 💡 *Run locally to see the full interactive experience: `pnpm dev` then open http://localhost:3000*
 
