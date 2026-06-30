@@ -27,6 +27,15 @@ WebhookLab is a **persistent webhook gateway** for development and testing. Rece
 - 🔍 **Search & Filter** — Search by content, header, timestamp, export as JSON/HAR
 - 🌓 **Dark/Light Theme** — Glassmorphism UI
 
+## 📸 Screenshots
+
+| Landing Page | Dashboard |
+|:---:|:---:|
+| ![Webhooklab Hero](screenshots/hero.png) | ![Webhooklab Dashboard](screenshots/dashboard.png) |
+
+> 💡 *Run locally to see the full interactive experience: `pnpm dev` then open http://localhost:3000*
+
+
 ## 🏗️ Architecture
 
 ```
